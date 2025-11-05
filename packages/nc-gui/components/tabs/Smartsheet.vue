@@ -307,6 +307,8 @@ watch(isViewsLoading, async () => {
         </Splitpanes>
       </NcFullScreen>
 
+      <LazySmartsheetInterface v-else-if="openedViewsTab === 'interface'" />
+
       <LazySmartsheetDetails v-else />
     </div>
     <LazySmartsheetExpandedFormDetached />

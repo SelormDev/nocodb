@@ -32,7 +32,7 @@ const onClickDetails = () => {
       v-e="['c:project:mode:details']"
       class="tab"
       :class="{
-        active: openedViewsTab !== 'view',
+        active: ['field', 'permissions', 'relation', 'api', 'webhook'].includes(openedViewsTab),
       }"
       @click="onClickDetails"
     >
@@ -45,6 +45,20 @@ const onClickDetails = () => {
         }"
       />
       <div class="tab-title nc-tab">{{ $t('general.details') }}</div>
+    </div>
+    <!-- ------------------- -->
+    <!-- Added Interface Tab -->
+    <!-- ------------------- -->
+    <div
+      v-e="['c:project:mode:interface']"
+      class="tab"
+      :class="{
+        active: openedViewsTab === 'interface',
+      }"
+      @click="onViewsTabChange('interface')"
+    >
+      <GeneralIcon icon="layout" class="tab-icon" :class="{}" />
+      <div class="tab-title nc-tab">Interface</div>
     </div>
   </div>
 </template>

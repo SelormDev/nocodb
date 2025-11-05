@@ -106,7 +106,9 @@ export const useViewsStore = defineStore('viewsStore', () => {
     // For types in ViewPageType type
     if (!route.value.params?.slugs || route.value.params.slugs?.length <= 1) return 'view'
 
-    if (['field', 'permissions', 'relation', 'api', 'webhook'].includes(route.value.params.slugs[1] as ViewPageType)) {
+    if (
+      ['field', 'permissions', 'relation', 'api', 'webhook', 'interface'].includes(route.value.params.slugs[1] as ViewPageType)
+    ) {
       return route.value.params.slugs[1] as ViewPageType
     }
 

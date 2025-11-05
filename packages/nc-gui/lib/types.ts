@@ -260,7 +260,7 @@ interface Users {
 
 type ProjectPageType = 'overview' | 'collaborator' | 'data-source' | 'base-settings' | 'syncs' | 'permissions'
 
-type ViewPageType = 'view' | 'webhook' | 'api' | 'field' | 'relation' | 'permissions'
+type ViewPageType = 'view' | 'webhook' | 'api' | 'field' | 'relation' | 'permissions' | 'interface'
 
 type NcButtonSize = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'xs'
 
